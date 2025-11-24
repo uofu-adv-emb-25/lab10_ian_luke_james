@@ -7,6 +7,20 @@ endif()
 set(sdkVersion 2.0.0)
 set(toolchainVersion 13_2_Rel1)
 set(picotoolVersion 2.0.0)
+
+cmake_minimum_required(VERSION 3.12)
+
+# Pull in PICO SDK (must be before project)
+include(pico_sdk_import.cmake)
+
+# We also need PICO EXTRAS
+include(pico_extras_import.cmake)
+
+project(pico_playground C CXX)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+
 if (DEFINED PICO_SDK_PATH)
 # Already defined, e.g. -D flag
 elseif (DEFINED ENV{PICO_SDK_PATH})
