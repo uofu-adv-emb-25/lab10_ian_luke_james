@@ -14,9 +14,6 @@
 	path = lib/unity
 	url = git@github.com:ThrowTheSwitch/Unity.git
     ignore = dirty
-[submodule "lib/extras"]
-	path = lib/extras
-	url = https://github.com/raspberrypi/pico-extras
 [submodule "lib/unity"]
 	path = lib/unity
 	url = https://github.com/ThrowTheSwitch/Unity
