@@ -15,9 +15,13 @@ This means that the power usage = 5V \* 30mA = 150mW.
 
 ### 2. Blink an LED using FreeRTOS Thread
 
-For this activity we found that it used a few more mA and we found it to fluctuate between 32mA and 35mA. This means our power consumption is between 160mA and 175mA.
+For this activity we found that it used a few more mA and we found it to fluctuate between 32mA and 35mA. This means our power consumption is between 160mW and 175mW.
 
 ### 3. Blink LED with busy loop
+
+We got 34mA when we fixed the while loop and added a blink statement at the end. We observed that the led was always on visibly as it was blinking fast enough to appear so. We also expected this current to be much larger, but the busy loop is likely not so resource intensive that it makes that much of a difference.
+
+34mA => 170mW of power usage.
 
 ### 4. Blink off an interrupt
 
