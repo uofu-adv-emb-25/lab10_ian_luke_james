@@ -25,6 +25,18 @@ We got 34mA when we fixed the while loop and added a blink statement at the end.
 
 ### 4. Blink off an interrupt
 
+At 1kHz we see 35mA. At 100kHz we see 35 as well. 2 MHz we see the same at 35mA.
+
+At frequencies above 1KHz we only see 35mA. This was kind of boring so we tested lower frequencies and observed that at 1Hz it fluctuated between 29mA to 31mA. At 100Hz we saw a noticeable current jump from ~30mA to 34mA.
+
+35mA => 175mW
+
 ### 5. Sleep Demo
 
+For this part we observed that it started at 18mA for 10 seconds, then went down to 1.2mA for another 10 seconds. This is what we expect as the sleep code is toggling a sleep state every 10 seconds.
+
 ### 6. Dormant Demo
+
+We observe 17.8mA when on, 0.8mA when dormant.
+
+17.8mA => 89mW, 0.8mA => 4mW
